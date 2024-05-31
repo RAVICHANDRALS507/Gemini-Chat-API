@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  font-family: 'Courier New', Courier, monospace;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+p{
+  margin-top: 15px;
+  font-size: 17px;
+  /* font-weight: 300; */
+  line-height: 1.8;
+  text-align: left;
+}
+
+.load{
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.load hr{
+  border-radius: 4px;
+  border: none;
+  background-color: f6f7f8;
+  background: linear-gradient(to right,#9ed7ff,#ffffff,#9ed7ff);
+  background-size: 800px 50px;
+  height: 20px;
+  animation: load 3s infinite linear;
+}
+
+@keyframes load{
+  0%{
+    background-position: -800px 0px;
+  }100%{
+    background-position: 800px 0px;
+  }
+}
+
+footer{
+  font-style: italic;
+  font-weight: bold;
+}
