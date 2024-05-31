@@ -59,7 +59,7 @@ function App() {
     }
   }
 
-// Copy the answer text to the clipboard and change the icon
+// Copy the answer text to the clipboard
 const copyToClipboard = () => {
   const range = document.createRange();
   range.selectNode(answerRef.current);
@@ -67,10 +67,6 @@ const copyToClipboard = () => {
   window.getSelection().addRange(range);
   document.execCommand('copy');
   window.getSelection().removeAllRanges();
-  setCopied(true);                // Set copied state to true
-  setTimeout(() => {
-    setCopied(false);             // Reset copied state after a short delay
-  }, 2000);                       // Reset after 2 seconds (adjust as needed)
 };
 
   return (
